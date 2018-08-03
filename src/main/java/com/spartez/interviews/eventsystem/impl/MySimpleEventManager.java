@@ -31,6 +31,7 @@ public class MySimpleEventManager implements EventManager {
 	    r.unlock();
 	}
 	for (EventListener listener : eventListenertsCollection) {
+	    @SuppressWarnings("rawtypes")
 	    final Class[] handlingClasses = listener.getHandledEventClasses();
 	    if (handlingClasses.length == 0 || Arrays.asList(handlingClasses).contains(eventClazz))
 		listener.handleEvent(event);
