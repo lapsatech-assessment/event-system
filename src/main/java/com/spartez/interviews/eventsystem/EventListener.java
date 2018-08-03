@@ -26,5 +26,6 @@ public interface EventListener
      *         or an empty array if the listener should receive all events without filtering.
      *         <b>Must not</b> return null.
      */
+    @SuppressWarnings("rawtypes")
     Class[] getHandledEventClasses();
 }
